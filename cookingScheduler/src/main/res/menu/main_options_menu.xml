@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:cheese="http://schemas.android.com/apk/res-auto">
+      
+    <item android:id="@+id/menu_settings"
+        android:title="@string/menu_settings"
+        cheese:showAsAction="ifRoom|withText"
+        android:icon="@drawable/ic_action_settings"
+        android:orderInCategory="100" />
+    
+    <item android:id="@+id/menu_parse_recipe"
+        android:title="@string/menu_parse_recipe"
+        cheese:showAsAction="ifRoom|withText"
+        android:icon="@drawable/ic_action_download"
+        android:orderInCategory="100"/>
+    
+    <item android:id="@+id/menu_share_all"
+        android:title="@string/menu_share_all"
+        cheese:showAsAction="ifRoom|withText"
+        android:icon="@drawable/ic_action_share"
+        android:orderInCategory="100"/>
+    
+    <item android:id="@+id/menu_deselect_all"
+        android:title="@string/menu_deselect_all"
+        cheese:showAsAction="ifRoom|withText"
+        android:icon="@drawable/ic_action_cancel"
+        android:orderInCategory="100"/>
+    
+    <item android:id="@+id/menu_about"
+        android:title="@string/menu_about"
+        cheese:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_about"
+        android:orderInCategory="100"/>
+    
+    <item android:id="@+id/menu_whats_new"
+        android:title="@string/menu_whats_new"
+        cheese:showAsAction="ifRoom|withText"
+        android:icon="@drawable/ic_action_about"
+        android:orderInCategory="100"/>
+    
+    <item android:id="@+id/menu_export_schedule"
+        android:title="@string/menu_export_schedule"
+        cheese:showAsAction="ifRoom|withText"
+        android:icon="@drawable/ic_action_share"
+        android:orderInCategory="100"/>
+    
+</menu>

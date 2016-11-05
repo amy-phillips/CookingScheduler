@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="horizontalSpacerWidth">4sp</dimen>
+    <dimen name="item_height">67dp</dimen>
+    <dimen name="section_div_height">20dp</dimen>
+</resources>

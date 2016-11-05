@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:onClick="startCooking"
+        android:text="@string/start_cooking" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Button01"
+        android:layout_alignParentLeft="true"
+        android:text="@string/choose_what_to_cook"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/addItemsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="addItems"
+        android:text="@string/add_item" />
+
+    <TextView
+        android:id="@+id/CurrentStepHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/addItemsButton"
+        android:layout_alignBottom="@+id/addItemsButton"
+        android:layout_toRightOf="@+id/addItemsButton"
+        android:text="@string/finish_time"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/finishTimeHeader"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Button01" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/finishTime"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/addItemsButton"
+        android:layout_toRightOf="@+id/CurrentStepHeader"
+        android:onClick="showFinishTimeDialog" />
+
+    <TextView
+        android:id="@+id/disabledItemsWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addItemsButton"
+        android:layout_alignParentLeft="true"
+        android:clickable="true"
+        android:onClick="onDisabledItemsWarningClicked"
+        android:text="@string/app_name"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/finishTimeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/disabledItemsWarning"
+        android:layout_alignParentLeft="true"
+        android:text="@string/app_name"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>

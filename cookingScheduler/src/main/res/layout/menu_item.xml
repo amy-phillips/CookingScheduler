@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/editMenuItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_action_edit"
+        android:contentDescription="@string/edit" />
+
+    <ImageView
+        android:id="@+id/deleteMenuItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_action_discard"
+        android:contentDescription="@string/delete_menu_item"
+        android:scaleType="center" />
+
+    <ImageView
+        android:id="@+id/shareMenuItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/deleteMenuItem"
+        android:background="@drawable/ic_action_share"
+        android:contentDescription="@string/menu_context_share"
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit ="marquee_forever"
+        android:scaleType="center" />
+
+     <TextView
+         android:id="@+id/menuItemName"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+         android:layout_marginLeft="8dp"
+         android:layout_toLeftOf="@+id/shareMenuItem"
+         android:layout_toRightOf="@+id/editMenuItem"
+         android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

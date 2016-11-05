@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:cheese="http://schemas.android.com/apk/res-auto" >
+    
+    <item android:id="@+id/menu_add_step"
+          android:icon="@drawable/ic_action_add_to_queue"
+          android:title="@string/add_step"
+    	  cheese:showAsAction="ifRoom|withText" />
+    
+    <item android:id="@+id/menu_save"
+          android:icon="@drawable/ic_action_save"
+          android:title="@string/save"
+    	  cheese:showAsAction="ifRoom|withText" />
+    
+    <item android:id="@+id/action_cancel"
+          android:icon="@drawable/ic_action_back"
+          android:title="@string/cancel"
+          cheese:showAsAction="ifRoom|withText" />
+    
+    <item android:id="@+id/action_rename"
+          android:icon="@drawable/ic_action_edit"
+          android:title="@string/rename"
+          cheese:showAsAction="ifRoom|withText" />
+    
+</menu>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="OnCancel"
+        android:text="@string/stop_cooking" />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="441dp"
+        android:layout_above="@+id/cancel"
+        android:layout_alignParentTop="true" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/finishTimeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cancel"
+        android:layout_alignBottom="@+id/cancel"
+        android:layout_toRightOf="@+id/cancel"
+        android:text="@string/finish_time"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/finishTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/finishTimeHeader"
+        android:layout_alignBottom="@+id/finishTimeHeader"
+        android:layout_toRightOf="@+id/finishTimeHeader"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

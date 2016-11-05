@@ -1,0 +1,208 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From Cooking Scheduler:
+* BandwidthTestWin.sdf
+* BandwidthTestWin.sln
+* BandwidthTestWin\
+* BandwidthTestWin\AssemblyInfo.cpp
+* BandwidthTestWin\BandwidthTestWin.cpp
+* BandwidthTestWin\BandwidthTestWin.vcxproj
+* BandwidthTestWin\BandwidthTestWin.vcxproj.filters
+* BandwidthTestWin\BandwidthTestWin.vcxproj.user
+* BandwidthTestWin\Form1.h
+* BandwidthTestWin\Form1.resX
+* BandwidthTestWin\ReadMe.txt
+* BandwidthTestWin\app.ico
+* BandwidthTestWin\app.rc
+* BandwidthTestWin\resource.h
+* BandwidthTestWin\shared\
+* BandwidthTestWin\shared\AmyAssert.cpp
+* BandwidthTestWin\shared\AmyAssert.h
+* BandwidthTestWin\shared\BandwidthTest.cpp
+* BandwidthTestWin\shared\BandwidthTest.h
+* BandwidthTestWin\shared\Config.cpp
+* BandwidthTestWin\shared\Config.h
+* BandwidthTestWin\shared\RttAndBwDetails.cpp
+* BandwidthTestWin\shared\RttAndBwDetails.h
+* BandwidthTestWin\win\
+* BandwidthTestWin\win\Clock.cpp
+* BandwidthTestWin\win\Clock.h
+* BandwidthTestWin\win\Mutex.cpp
+* BandwidthTestWin\win\Mutex.h
+* BandwidthTestWin\win\UsefulTypes.cpp
+* BandwidthTestWin\win\UsefulTypes.h
+* Blender\
+* Blender\clock.blend
+* Blender\clock_face.blend
+* Blender\clock_face.blend1
+* Blender\clock_hand.blend
+* Blender\cube.blend
+* Blender\cube.blend1
+* Blender\cube1.tga
+* Blender\cube1.xcf
+* Blender\cube2.tga
+* Blender\cube2.xcf
+* Blender\cube3.tga
+* Blender\cube3.xcf
+* Blender\cube4.tga
+* Blender\cube4.xcf
+* Blender\cube5.tga
+* Blender\cube5.xcf
+* Blender\cube_colour.tga
+* Blender\cube_squares.tga
+* Blender\weekend.gif
+* Blender\weekend.tga
+* Blender\weekend.xcf
+* Blender\weekend1.tga
+* Blender\weekend1.xcf
+* Blender\weekend2.tga
+* Blender\weekend2.xcf
+* Blender\weekend3.tga
+* Cooking\
+* Cooking\.classpath
+* Cooking\.project
+* Cooking\.settings\
+* Cooking\.settings\org.eclipse.jdt.core.prefs
+* Cooking\AndroidManifest.xml
+* Cooking\default.properties
+* Cooking\gen\
+* Cooking\gen\uk\
+* Cooking\gen\uk\co\
+* Cooking\gen\uk\co\islovely\
+* Cooking\gen\uk\co\islovely\CookingScheduler\
+* Cooking\gen\uk\co\islovely\CookingScheduler\R.java
+* Cooking\res\
+* Cooking\res\drawable-hdpi\
+* Cooking\res\drawable-hdpi\icon.png
+* Cooking\res\drawable-ldpi\
+* Cooking\res\drawable-ldpi\icon.png
+* Cooking\res\drawable-mdpi\
+* Cooking\res\drawable-mdpi\icon.png
+* Cooking\res\layout\
+* Cooking\res\layout\main.xml
+* Cooking\res\values\
+* Cooking\res\values\strings.xml
+* Cooking\src\
+* Cooking\src\uk\
+* Cooking\src\uk\co\
+* Cooking\src\uk\co\islovely\
+* Cooking\src\uk\co\islovely\CookingScheduler\
+* Cooking\src\uk\co\islovely\CookingScheduler\CookingScheduler.java
+* Library\
+* Library\AssetImportState
+* Library\AssetVersioning.db
+* Library\AudioManager.asset
+* Library\BuildPlayer.prefs
+* Library\BuildSettings.asset
+* Library\DynamicsManager.asset
+* Library\EditorBuildSettings.asset
+* Library\EditorSettings.asset
+* Library\EditorUserBuildSettings.asset
+* Library\FailedAssetImports.txt
+* Library\InputManager.asset
+* Library\InspectorExpandedItems.asset
+* Library\MonoManager.asset
+* Library\NetworkManager.asset
+* Library\ProjectSettings.asset
+* Library\QualitySettings.asset
+* Library\ScriptMapper
+* Library\TagManager.asset
+* Library\TimeManager.asset
+* Library\assetDatabase3
+* Library\assetservercachev3
+* Library\expandedItems
+* Library\guidmapper
+* SimpleServer.sln
+* ic_launcher-web.png
+* pan-web.png
+* proguard\
+* proguard\dump.txt
+* proguard\mapping.txt
+* proguard\seeds.txt
+* proguard\usage.txt
+From library:
+* .gitignore
+* ant.properties
+* build.xml
+* pom.xml
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:21.0.3
+android-support-v7-appcompat.jar => com.android.support:appcompat-v7:21.0.3
+
+Replaced Libraries with Dependencies:
+-------------------------------------
+The importer recognized the following library projects as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the source files in your project were of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the library replacement in the import wizard and try
+again:
+
+android-support-v7-appcompat => [com.android.support:appcompat-v7:21.0.3]
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In library:
+* AndroidManifest.xml => library\src\main\AndroidManifest.xml
+* assets\ => library\src\main\assets
+* lint.xml => library\lint.xml
+* res\ => library\src\main\res\
+* src\ => library\src\main\java\
+In Cooking Scheduler:
+* AndroidManifest.xml => cookingScheduler\src\main\AndroidManifest.xml
+* assets\ => cookingScheduler\src\main\assets\
+* libs\acra-4.7.0-RC.1-sources.jar => cookingScheduler\libs\acra-4.7.0-RC.1-sources.jar
+* libs\acra-4.7.0-RC.1.jar => cookingScheduler\libs\acra-4.7.0-RC.1.jar
+* libs\jsoup-1.8.1.jar => cookingScheduler\libs\jsoup-1.8.1.jar
+* lint.xml => cookingScheduler\lint.xml
+* proguard-project.txt => cookingScheduler\proguard-project.txt
+* res\ => cookingScheduler\src\main\res\
+* src\ => cookingScheduler\src\main\java\
+* src\com\android\vending\billing\IInAppBillingService.aidl => cookingScheduler\src\main\aidl\com\android\vending\billing\IInAppBillingService.aidl
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

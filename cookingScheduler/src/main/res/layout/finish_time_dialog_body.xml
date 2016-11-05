@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent" >
+
+    <RadioGroup
+        android:id="@+id/radioGroupFinishTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/asSoonAsPossible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/as_soon_as_possible" />
+
+        <RadioButton
+            android:id="@+id/manualFinishTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/manual_finish_time" />
+
+        <TimePicker
+            android:id="@+id/finishTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner" 
+            android:layout_marginLeft="30dp" />
+
+        <DatePicker
+            android:id="@+id/finishDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:calendarViewShown="false" />
+
+    </RadioGroup>
+
+</ScrollView>

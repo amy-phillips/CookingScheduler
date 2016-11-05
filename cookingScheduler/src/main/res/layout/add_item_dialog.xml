@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="OnCancel"
+        android:text="@string/cancel" />
+
+    <Button
+        android:id="@+id/add_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="OnAddItem"
+        android:text="@string/save_item" />
+ 
+    <com.mobeta.android.dslv.DragSortListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dslv="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recipeStepsListView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="7dp"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:layout_margin="0dp"
+    android:dividerHeight="5dp"
+    dslv:drag_enabled="true"
+    dslv:collapsed_height="2dp"
+    dslv:drag_scroll_start="0.33"
+    dslv:max_drag_scroll_speed="0.5"
+    dslv:float_alpha="0.6"
+    dslv:slide_shuffle_speed="0.3"
+    dslv:track_drag_sort="false"
+    dslv:use_default_controller="true"
+    dslv:sort_enabled="false"
+    dslv:remove_enabled="true"
+    dslv:remove_mode="flingRemove"
+    android:background="#E5E5E5" />
+  
+
+    <Button
+        android:id="@+id/failedParse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/cancel"
+        android:onClick="onReportToDeveloper"
+        android:text="@string/failed_parse_button" />
+
+</RelativeLayout>

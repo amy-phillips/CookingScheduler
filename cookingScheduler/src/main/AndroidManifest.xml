@@ -1,0 +1,108 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.co.islovely.cooking.scheduler"
+    android:versionCode="9"
+    android:versionName="3.7"
+    android:installLocation="auto">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="25" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="com.android.vending.BILLING" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:name="GlobalApplication"
+        android:theme="@style/MyAppTheme"
+        android:allowBackup="true"
+        android:backupAgent="uk.co.islovely.cooking.scheduler.CloudBackupAgent" >
+        <meta-data  android:name="com.google.android.backup.api_key"
+    				android:value="AEdPqrEAAAAIb6DQf2DxNN__vZQ3H8JNik6kSbYMc8Hn62y_Xg" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            <!-- Support by mime type -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/json" />
+            </intent-filter>
+            
+            <!-- Support web pages too - this means we can capture a share of a recipe from a browser -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/html" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+            <!-- Support by file extension -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+                <data android:scheme="http" />
+                <data android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.json" />
+            </intent-filter>
+        </activity>
+        
+        <!--  we need parentActivityName specified to make android.R.id.home clickable -->
+        <activity
+            android:name=".AddMenuItemActivity"
+            android:label="@string/title_activity_add_menu_item"
+            android:parentActivityName="uk.co.islovely.cooking.scheduler.MainActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+	        <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="uk.co.islovely.cooking.scheduler.MainActivity" />
+            
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="uk.co.islovely.cooking.scheduler.MainActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+	        <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="uk.co.islovely.cooking.scheduler.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName="uk.co.islovely.cooking.scheduler.MainActivity" >
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+	        <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="uk.co.islovely.cooking.scheduler.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SummaryActivity"
+            android:launchMode="singleTop"
+            android:label="@string/title_activity_summary" 
+            android:parentActivityName="uk.co.islovely.cooking.scheduler.MainActivity">
+	        <!-- Parent activity meta-data to support 4.0 and lower -->
+	        <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="uk.co.islovely.cooking.scheduler.MainActivity" />
+          	<intent-filter>
+                <action android:name="uk.co.islovely.cooking.scheduler.SummaryActivity" />
+                <category android:name="android.intent.category.DEFAULT" /> 
+            </intent-filter>
+        </activity>
+        <receiver android:name=".AlarmReceiver" />
+    </application>
+
+</manifest>

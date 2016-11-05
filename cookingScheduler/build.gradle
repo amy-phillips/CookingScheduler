@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "uk.co.islovely.cooking.scheduler"
+        minSdkVersion 8
+        targetSdkVersion 23
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':library')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'ch.acra:acra:4.9.1'
+    compile files('libs/jsoup-1.8.1.jar')
+}
